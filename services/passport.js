@@ -13,7 +13,8 @@ passport.use(
 		},
 		(accessToken, refresToken, profile, done) => {
 			console.log(profile);
-			//course me ye tha but ye kaam nahi kr raha tha new User({ googleId: profile.id }).save();
+			//course me ye tha but ye kaam nahi kr raha tha
+			// new User({ googleId: profile.id }).save();
 			const instance = new User({ googleId: profile.id });
 			instance.save(function(err) {
 				if (err) return handleError(err);
